@@ -20,10 +20,6 @@ var isValid = function(s) {
             return false;
         }
     }
-
-    if (stack == 0) {
-        return true;
-    } else {
-        return false;
-    }
+    
+    return stack.length == 0;
 };

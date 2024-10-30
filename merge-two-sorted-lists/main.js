@@ -24,11 +24,7 @@ var mergeTwoLists = function(list1, list2) {
         }
         tail = tail.next;
     }
-    if (list1 !== null) {
-        tail.next = list1;
-    } else if (list2 !== null) {
-        tail.next = list2;
-    }
+    tail.next = list1 || list2;
     return dummy.next;
 };
 

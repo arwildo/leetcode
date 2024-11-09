@@ -4,27 +4,22 @@
  * @return {number}
  */
 var search = function(nums, target) {
-    let l = 0;
-    let r = nums.length - 1;
+   let l = 0;
+   let r = nums.length - 1;
 
-    while (l <= r) {
-        // important : to get the middle of array
+   while (l <= r) {
+        // bagi dua
         let mid = Math.floor((l + r) / 2);
 
-        // if the target found
+        // kalau ketemu target
         if (nums[mid] == target) {
             return mid;
-        }
-
-        // if the target is less than the current mid value
-        if (nums[mid] < target) {
-            l = mid + 1; // the current mid is left
+        } else if (nums[mid] < target) {
+            l = mid + 1; // mid sekarang + 1 dan jadi left
         } else {
-            r = mid - 1; // the current mid is right
+            r = mid - 1; // mid sekarang - 1 dan jadi right
         }
-    }
+   } 
 
-    // target not found in array
-    return -1;
+   return -1;
 };
-

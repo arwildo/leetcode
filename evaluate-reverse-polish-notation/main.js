@@ -4,12 +4,10 @@
  */
 var evalRPN = function(tokens) {
     let numbers = [];
-
-    let operator_list = ['+', '-', '*', '/'];
     let calc = 0;
 
     for (let i=0; i < tokens.length; i++) {
-        if (operator_list.includes(tokens[i])) {
+        if (['+', '-', '*', '/'].includes(tokens[i])) {
             switch (tokens[i]) {
                 case '+':
                     calc = parseInt(numbers[numbers.length - 2]) + parseInt(numbers[numbers.length - 1]);

@@ -1,9 +1,6 @@
 /**
  * @param {number[]} nums
  * @return {number[][]}
-
- [ -4, -1, -1, 0, 1, 2 ]
-
  */
 var threeSum = function(nums) {
     nums.sort((a, b) => a - b);
@@ -12,7 +9,7 @@ var threeSum = function(nums) {
 
     for (let i=0; i < nums.length - 2; i++) {
         // avoid dups
-        if (i > 0 && nums[i] === nums[i - 1]) {
+        if (nums[i] === nums[i - 1]) {
             continue;
         }
 
